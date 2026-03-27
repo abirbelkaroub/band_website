@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Band Website</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: rgb(115, 115, 115);
+        font-family: "Lato", sans-serif;
+      }
+      .dropdown {
+        display: inline-block;
+      }
+
+      nav {
+        background-color: black;
+        padding: 10px;
+      }
+
+      .nav_element_class a {
+        color: white;
+        text-decoration: none;
+        padding: 25px;
+      }
+
+      .dropdown button {
+        color: white;
+        background-color: black;
+        padding: 20px;
+        font-size: 16px;
+        font-family: inherit;
+        font-family: "Lato", sans-serif;
+        border: none;
+      }
+
+      .nav_element_class a:hover,
+      .dropdown button:hover {
+        background-color: #e6e3e3;
+        color: #5e4469;
+        cursor: pointer;
+      }
+
+      .dropdown:hover .content {
+        display: block;
+      }
+
+      .dropdown a {
+        display: block;
+        color: black;
+      }
+
+      .dropdown .content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 2px, 2px, 5px, hsl(0, 0%, 95%);
+        min-width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav_element_class">
+        <a href="">HOME</a>
+        <a href="">BAND</a>
+        <a href="">TOWER</a>
+        <a href="">CONTACT</a>
+        <div class="dropdown">
+          <button>MORE</button>
+          <div class="content">
+            <a href="marchandise.html">Marchandise</a>
+            <a href="extras.html">Extras</a>
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
