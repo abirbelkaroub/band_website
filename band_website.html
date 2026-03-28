@@ -17,8 +17,12 @@
       }
 
       nav {
+        position: fixed;
         background-color: black;
+        width: 100%;
         padding: 10px;
+        z-index: 1000;
+        top: 0;
       }
 
       .nav_element_class a {
@@ -60,6 +64,45 @@
         box-shadow: 2px, 2px, 5px, hsl(0, 0%, 95%);
         min-width: 150px;
       }
+      /* image */
+      .image_group {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+      /* CSS animation defined by @keyframes is copied from a website  */
+      .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: show 9s infinite;
+      }
+      @keyframes show {
+        0% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 1;
+        }
+        34% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .i1 {
+        animation-delay: 0s;
+      }
+      .i2 {
+        animation-delay: 3s;
+      }
+      .i3 {
+        animation-delay: 6s;
+      }
     </style>
   </head>
 
@@ -71,7 +114,7 @@
         <a href="">TOWER</a>
         <a href="">CONTACT</a>
         <div class="dropdown">
-          <button>MORE</button>
+          <button>MORE ▼</button>
           <div class="content">
             <a href="marchandise.html">Marchandise</a>
             <a href="extras.html">Extras</a>
@@ -80,5 +123,12 @@
         </div>
       </div>
     </nav>
+    <!-- importing images -->
+    <div class="image_group">
+      <img src="pictures/1.png" class="image i1" />
+      <img src="pictures/2.jpeg" class="image i2" />
+      <img src="pictures/3.jpg" class="image i3" />
+      <p>text</p>
+    </div>
   </body>
 </html>
